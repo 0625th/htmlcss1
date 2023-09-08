@@ -1,3 +1,107 @@
+body {
+  color: #333;
+  font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0px;
+  padding: 0px;
+}
+
+header {
+  display: block;
+}
+
+.Header {
+  width: 100%;
+  position: absolute;
+}
+
+.HeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 36px;
+  max-width: 100%;
+  position: relative;
+}
+
+.HeaderContainer>:last-child {
+  display: inline-flex;
+}
+
+.HeaderLogo {
+  align-self: center;
+}
+
+.HeaderLogo:hover {
+  opacity: 0.8;
+}
+
+.HeaderLogoImage {
+  display: block;
+  height: 20px;
+  width: auto;
+}
+
+.HeaderNavList {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  list-style: none;
+}
+
+.HeaderNavListItem {
+  margin-right: 45px;
+}
+
+.HeaderNavListItem:hover {
+  opacity: 0.8;
+}
+
+.HeaderNavListItemLink {
+  text-decoration: none;
+  color: #333;
+}
+
+.HeaderNavListItemLinkMenu1 {
+  display: block;
+  font-weight: 700;
+  text-align: center;
+  font-family: 'Lato',sans-serif;
+}
+
+.HeaderNavListItemLinkMenu2 {
+  display: block;
+  font-weight: 700;
+  text-align: center;
+  font-size: 10px;
+}
+
+.HeaderNavListItemButton {
+  align-items: center;
+  background-color: #f79214;
+  border: none;
+  border-radius: 38px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  font-size: 12px;
+  height: 40px;
+  padding: 0px 10px;
+}
+
+section {
+  display: block;
+}
+
 .FirstView {
   background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/styles/../images/home/first-view/top-hero.jpg);
   background-size: cover;
