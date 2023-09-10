@@ -7,7 +7,7 @@
 
 body {
   color: #333;
-  
+  font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
   font-size: 14px;
   font-weight: 500;
   margin: 0px;
@@ -62,6 +62,10 @@ header {
   display: flex;
 }
 
+.HeaderNavHamburger {
+  display: none !important;
+}
+
 .HeaderNavList {
   align-items: center;
   display: flex;
@@ -90,7 +94,7 @@ ul {
   font-weight: 700;
   text-align: center;
   font-family: 'Lato Black', sans-serif;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .HeaderNavListItemLinkMenu2 {
@@ -130,6 +134,12 @@ section {
   background-position: center;
   padding-top: 100px;
   padding-bottom: 28px;
+}
+
+
+.FirstViewMainImageSP {
+  width: 100%;
+  display: none !important;
 }
 
 .FirstViewContainer {
@@ -235,7 +245,7 @@ img {
 
 .AboutTitle h2 {
   font-family: 'Lato Black','YuGothic';
-  font-size: 38px;
+  font-size: 36px;
   font-weight: 900;
   letter-spacing: 0.1em;
   line-height: 54px;
@@ -267,13 +277,100 @@ img {
   .Header {
     background-color: #fff;
     z-index: 10;
+    padding: 10px 0px;
   }
   
   .HeaderCommon {
     position: fixed !important;
   }
   
+  .HeaderContainer {
+    padding-right: 36px;
+    padding-left: 10px;
+  }
+  
+  .HeaderContainer>:last-child {
+    display: inline-flex;
+  }
+  
+  .HeaderNavHamburger {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 21px;
+    z-index: 100;
+  }
+  
+  .HeaderNavHumburgerLine {
+    position: absolute;
+    display: block !important;
+    top: 50%;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    transform: translate(0,-50%);
+    border-radius: 10px;
+    transition: top 0.2s,transform 0.2s,opacity 0.3s;
+  }
+  
+  .HeaderNavHumburgerLine:first-child {
+    top: 0;
+  }
+  
+  .HeaderNavHumburgerLine:last-child {
+    top: 100%;
+  }
+  
+  .HeaderNavList {
+    overflow-y: scroll;
+    position: fixed;
+    top: 60px;
+    left: 100%;
+    width: 100%;
+    display: block;
+    transition: transform .5s;
+    z-index: 99;
+    background-color: rgba(0,0,0,0.8);
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+  }
+  
+  .HeaderNavListItem {
+    margin-right: 0px;
+  }
+  
+  .AboutTitle p {
+    margin-top: 0px;
+  }
 }
+
+
+/* ウィンドウ幅が1024pxまでの場合に適用するCSS */
+@media screen and (max-width: 1024px) {
+  .About {
+    flex-direction: column;
+  }
+  
+  .AboutVideo {
+    margin-bottom: 16px;
+    width: 75%;
+  }
+  
+  .AboutTitle {
+    margin-left: 0;
+    width: 75%;
+  }
+  
+  .AboutTitle p {
+    margin-bottom: 32px;
+  }
+  
+  .AboutLogo {
+    margin: auto;
+  }
+}
+
 
 /* ウィンドウ幅が767pxまでの場合に適用するCSS */
 @media screen and (max-width: 767px) {
@@ -285,6 +382,7 @@ img {
   .HeaderContainer {
     max-width: 100%;
     margin: 0 20px;
+    height: 20px;
   }
   
   .HeaderLogo {
@@ -299,6 +397,70 @@ img {
     display: block !important;
     height: 16px;
     width: auto;
+  }
+  
+
+  
+  .FirstView {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 35px;
+  }
+  
+  .FirstViewMainImageSP {
+    display: block !important;
+  }
+  .FirstViewContainer {
+    margin-top: -45vw;
+    max-width: none;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .FirstViewContent {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .FirstViewContentTitle {
+    font-size: 25px;
+    line-height: 36px;
+  }
+  
+  .FirstViewContentImages {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  
+  .FirstViewContentImages img {
+    margin-right: 0px;
+    width: 27.5%;
+  }
+  
+  .FirstViewContentButton {
+    width: 100% !important;
+  }
+  
+  .AboutWrapper {
+    padding: 30px 0;
+  }
+  
+  .About {
+    flex-direction: column;
+    max-width: none;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .AboutVideo {
+    width: 100%;
+  }
+  
+  .AboutTitle {
+    margin-bottom: 0;
+    width: 100%;
   }
   
 }
