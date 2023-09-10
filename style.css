@@ -48,10 +48,15 @@ header {
 }
 
 .HeaderLogoImage {
-  display: block;
+  display: block !important;
   height: 20px;
   width: auto;
 }
+
+.HeaderLogoImageSP {
+  display: none !important;
+}
+
 
 .HeaderNavigation {
   display: flex;
@@ -255,4 +260,45 @@ img {
 
 .AboutLogo > img {
   width: 158px;
+}
+
+/* ウィンドウ幅が1080pxまでの場合に適用するCSS */
+@media screen and (max-width: 1080px) {
+  .Header {
+    background-color: #fff;
+    z-index: 10;
+  }
+  
+  .HeaderCommon {
+    position: fixed !important;
+  }
+  
+}
+
+/* ウィンドウ幅が767pxまでの場合に適用するCSS */
+@media screen and (max-width: 767px) {
+  .Header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  .HeaderContainer {
+    max-width: 100%;
+    margin: 0 20px;
+  }
+  
+  .HeaderLogo {
+    transition: opacity 0.2s;
+  }
+  
+  .HeaderLogoImage {
+    display: none !important;
+  }
+  
+  .HeaderLogoImageSP {
+    display: block !important;
+    height: 16px;
+    width: auto;
+  }
+  
 }
